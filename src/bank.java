@@ -137,7 +137,8 @@ public class bank
                                 System.out.println("2.ATM BALANCE");
                                 System.out.println("3.LOGOUT");
                                 adm = in.next();
-                            } else {
+                            }
+                            else {
                                 if (adm.equals("2")) {
                                     System.out.println(total(map));
                                     System.out.println("Number of 2000:"+map.get(2000));
