@@ -18,15 +18,16 @@ public class bank
     }
     public static int denom(HashMap<Integer,Integer> map,int target)
     {
-        for(int i:map.keySet())
+        HashMap<Integer,Integer>map2=new HashMap<>(map);
+        for(int i:map2.keySet())
         {
             if(i<=target)
             {
                 int j=0;
-                while(map.get(i)!=0 && i<=target)
+                while(map2.get(i)!=0 && i<=target)
                 {
                     target-=i;
-                    map.put(i,map.get(i)-1);
+                    map2.put(i,map.get(i)-1);
                     j++;
                     if(target<=0)break;
                 }
